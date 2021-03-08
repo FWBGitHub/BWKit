@@ -17,7 +17,7 @@
 		8FA51D4F35CC0E1484D8BAF9AA81EB54 /* Pods-BWKit_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9EE3461C65021D333B96F197B9838F /* Pods-BWKit_Example-dummy.m */; };
 		9217E70B1E3AF94DA5B4DE5B19C740CC /* BWKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E86C2E032C68F386C576215B27A7BCF3 /* BWKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9FDEFB4761A51A434B56F7018AA3B1A9 /* BWHudView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5026DCCC96BEFA23179269BCD045D7D0 /* BWHudView.swift */; };
-		A146C8E425F1CD97002B5131 /* BWKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = A146C8E325F1CD97002B5131 /* BWKit.swift */; };
+		A1A9121F25F5F0C600655EC4 /* BWKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A9121E25F5F0C600655EC4 /* BWKit.swift */; };
 		AC5C114837A42513D90AAEA106BFAAE1 /* Pods-BWKit_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DB4F37B24BEB61B67DA80804731D3D7 /* Pods-BWKit_Tests-dummy.m */; };
 		B2CBDB188644F9A0AFC99D831DDE1589 /* UITextField+BWExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B4F0C076F23F1CF7F4CCE1C13D5DA1 /* UITextField+BWExtensions.swift */; };
 		C26045D12635C2F3E504B498FEF8994F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
@@ -84,7 +84,7 @@
 		97D82A14476EB2A1CBFE8495A83694E8 /* Pods-BWKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BWKit_Example.release.xcconfig"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9F11667715DB2C5E72B4A0CAC62E82B4 /* BWPublicConst.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BWPublicConst.swift; path = BWKit/Classes/BWPublicConst.swift; sourceTree = "<group>"; };
-		A146C8E325F1CD97002B5131 /* BWKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BWKit.swift; sourceTree = "<group>"; };
+		A1A9121E25F5F0C600655EC4 /* BWKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BWKit.swift; path = BWKit/Classes/BWKit.swift; sourceTree = "<group>"; };
 		AB1054DE57B7D467E83C1E650907DA1F /* BWKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = BWKit.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		AB3401847951D67DD271AA29F3C584A3 /* UIButton+BWExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIButton+BWExtensions.swift"; sourceTree = "<group>"; };
 		B330135AEEDFF4E0603FE424DE20F617 /* Pods-BWKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BWKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -185,7 +185,7 @@
 		3E79D02C15F916DF475D307519026B1F /* BWKit */ = {
 			isa = PBXGroup;
 			children = (
-				A146C8E325F1CD97002B5131 /* BWKit.swift */,
+				A1A9121E25F5F0C600655EC4 /* BWKit.swift */,
 				9F11667715DB2C5E72B4A0CAC62E82B4 /* BWPublicConst.swift */,
 				3331252415B9E60C0CB40486CC12BED9 /* Custom */,
 				E2EEBA86A19C391BC233802CDE1419A4 /* Extensions */,
@@ -468,7 +468,7 @@
 				54ED9C5E59FC3D83FC07060904D275A1 /* UIFont+BWExtensions.swift in Sources */,
 				7DB14B253D77B8AB36FBDB95BD0D2C88 /* UIImage+BWExtensions.swift in Sources */,
 				D158A8F9F8A1CD626D5E63D7DA435D14 /* UILabel+BWExtensions.swift in Sources */,
-				A146C8E425F1CD97002B5131 /* BWKit.swift in Sources */,
+				A1A9121F25F5F0C600655EC4 /* BWKit.swift in Sources */,
 				B2CBDB188644F9A0AFC99D831DDE1589 /* UITextField+BWExtensions.swift in Sources */,
 				E9009E4E7052F7A80089A70B84C0C84B /* UIView+BWExtensions.swift in Sources */,
 			);
