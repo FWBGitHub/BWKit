@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let str:String = "15757181084"
+        let btn = BWTimeDownButton()
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.bw.showHint("123123")

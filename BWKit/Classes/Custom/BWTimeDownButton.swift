@@ -7,7 +7,7 @@
 
 import UIKit
 public let BWTimeDownTitle = "BWTimeDownTitle"
-class BWTimeDownButton: UIButton {
+public class BWTimeDownButton: UIButton {
     enum BWTimeDownType {
         ///可倒计时--可点击
         case BWTimeDownNormal
@@ -49,7 +49,7 @@ class BWTimeDownButton: UIButton {
             
         }
     }
-    public func bw_setTitle(_ title:String,timeDownstate:BWTimeDownType){
+     func bw_setTitle(_ title:String,timeDownstate:BWTimeDownType){
         switch timeDownstate {
         case .BWTimeDownNormal:
             self.setTitle(title, for:.normal)
@@ -69,7 +69,7 @@ class BWTimeDownButton: UIButton {
         }
         
     }
-    public func bw_setTitleColor(_ color:UIColor,timeDownstate:BWTimeDownType){
+     func bw_setTitleColor(_ color:UIColor,timeDownstate:BWTimeDownType){
         switch timeDownstate {
         case .BWTimeDownNormal:
             self.setTitleColor(color, for:.normal)
