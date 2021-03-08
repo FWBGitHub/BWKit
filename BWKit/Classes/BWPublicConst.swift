@@ -7,7 +7,7 @@
 //
 
 import UIKit
-struct BWConst{
+public struct BWConst{
     public static let SCREEN_WIDTH:CGFloat = UIScreen.main.bounds.width
     public static let SCREEN_HEIGHT:CGFloat = UIScreen.main.bounds.height
     
