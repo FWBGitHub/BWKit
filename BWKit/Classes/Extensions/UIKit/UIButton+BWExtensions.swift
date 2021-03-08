@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UIButton{
+public extension BWSpace where Base:UIButton{
     static func createButton(textFont:UIFont,textColor:UIColor) -> UIButton{
         let btn = UIButton()
         btn.setTitleColor(textColor, for: .normal)

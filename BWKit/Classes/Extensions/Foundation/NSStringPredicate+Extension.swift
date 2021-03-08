@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension String{
+public extension BWSpace where Base == String{
     enum StringValidateType {
         case email
         case phoneNumber
@@ -34,11 +34,9 @@ extension String{
             predicateStr = "^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$"
         case .password:
             predicateStr = "^[a-zA-Z0-9]{6,20}+$"
-        default:
-            break
         }
         
         let predicate =  NSPredicate(format: "SELF MATCHES %@" ,predicateStr)
-        return predicate.evaluate(with: self)
+        return predicate.evaluate(with: self.base)
     }
 }

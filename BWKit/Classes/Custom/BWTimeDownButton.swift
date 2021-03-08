@@ -65,7 +65,6 @@ class BWTimeDownButton: UIButton {
 
             break
 
-        default: break
 
         }
         
@@ -86,7 +85,6 @@ class BWTimeDownButton: UIButton {
 
             break
 
-        default: break
 
         }
     }
@@ -151,7 +149,7 @@ class BWTimeDownButton: UIButton {
         
         disableAttrbute.addAttribute(.foregroundColor, value: self.stateDict[BWTimeDownStateKey.BWTimeDowning_titleColor] ?? "", range:NSRange(location: 0, length: disableAttrbute.length))
         
-        disableAttrbute.addAttribute(.foregroundColor, value: self.timeColor as Any, range: disableAttrbute.string.nsrangeToStr(of: time))
+        disableAttrbute.addAttribute(.foregroundColor, value: self.timeColor as Any, range: disableAttrbute.string.bw.nsrangeToStr(of: time))
         return disableAttrbute
     }
     func stopTimeDown(){

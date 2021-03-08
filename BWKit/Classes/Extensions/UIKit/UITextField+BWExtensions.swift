@@ -12,7 +12,7 @@ extension UITextField {
         static var limitNumber_identifier: String = "UITextField.limitNumber"
     }
     
-    public var limitNumber: NSInteger {
+    public var bw_limitNumber: NSInteger {
         get {
             return objc_getAssociatedObject(self, &AssociatedKey.limitNumber_identifier) as! NSInteger
         }
@@ -23,9 +23,9 @@ extension UITextField {
         }
     }
     @objc func textFieldDidChange( _ textField:UITextField){
-        if (textField.text!.count > textField.limitNumber) {
+        if (textField.text!.count > textField.bw_limitNumber) {
             let str:String = textField.text!
-            self.text = String(str[..<str.index(str.startIndex, offsetBy: textField.limitNumber)])
+            self.text = String(str[..<str.index(str.startIndex, offsetBy: textField.bw_limitNumber)])
         }
     }
 }

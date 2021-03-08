@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UILabel{
+public extension BWSpace where Base:UILabel{
     static func createLabel(textFont:UIFont,textColor:UIColor) -> UILabel{
         let label = UILabel()
         label.font = textFont

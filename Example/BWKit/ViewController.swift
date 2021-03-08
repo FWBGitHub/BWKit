@@ -7,17 +7,20 @@
 //
 
 import UIKit
-
+import BWKit
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        let str:String = "15757181084"
+        
     }
-
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.bw.showHint("123123")
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
     }
 
 }

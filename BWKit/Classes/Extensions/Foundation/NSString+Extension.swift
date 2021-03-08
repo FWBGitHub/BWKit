@@ -8,8 +8,18 @@
 
 import UIKit
 import CommonCrypto
-
-extension String{
+public extension String{
+    /// String使用下标截取字符串 , 示例字符串"[0..<2] 结果是 "示例"
+    subscript (r: Range<Int>) -> String {
+        get {
+            let startIndex = self.index(self.startIndex, offsetBy: r.lowerBound)
+            let endIndex = self.index(self.startIndex, offsetBy: r.upperBound)
+            
+            return String(self[startIndex..<endIndex])
+        }
+    }
+}
+public extension BWSpace where Base == String{
     /*计算文本宽、高*/
      func calculateWithFont(textFont:AnyObject,maxWidth:CGFloat) -> CGSize{
         var attributes:[NSAttributedString.Key:AnyObject]
@@ -22,7 +32,7 @@ extension String{
             attributes = [NSAttributedString.Key.font:UIFont.systemFont(ofSize: textFont as! CGFloat)]
         }
         
-        let rect = (self as NSString).boundingRect(with: CGSize(width: maxWidth, height: CGFloat(MAXFLOAT)), options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: attributes, context: nil)
+        let rect = (self.base as NSString).boundingRect(with: CGSize(width: maxWidth, height: CGFloat(MAXFLOAT)), options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: attributes, context: nil)
         return rect.size
     }
     func calculateWithFont(textFont:AnyObject) -> CGSize{
@@ -33,27 +43,15 @@ extension String{
         }else{
             attributes = [NSAttributedString.Key.font:UIFont.systemFont(ofSize: textFont as! CGFloat)]
         }
-        let rect = (self as NSString).boundingRect(with: CGSize(width: CGFloat.greatestFiniteMagnitude, height: CGFloat.greatestFiniteMagnitude), options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: attributes, context: nil)
+        let rect = (self.base as NSString).boundingRect(with: CGSize(width: CGFloat.greatestFiniteMagnitude, height: CGFloat.greatestFiniteMagnitude), options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: attributes, context: nil)
         return rect.size
     }
-
-    
-    /// String使用下标截取字符串 , 示例字符串"[0..<2] 结果是 "示例"
-    subscript (r: Range<Int>) -> String {
-        get {
-            let startIndex = self.index(self.startIndex, offsetBy: r.lowerBound)
-            let endIndex = self.index(self.startIndex, offsetBy: r.upperBound)
-            
-            return String(self[startIndex..<endIndex])
-        }
-    }
-    
     ///Range-->NSRange
     func nsRange(from Range: Range<String.Index>) -> NSRange {
-        return NSRange(Range, in: self)
+        return NSRange(Range, in: self.base)
     }
     func nsrangeToStr(of string: String) -> NSRange {
-        let range = self.range(of: string)
+        let range = self.base.range(of: string)
         return nsRange(from: range!)
     }
     ///获取当前时间戳
@@ -63,7 +61,7 @@ extension String{
 }
 
 //MARK: MD5加密
-extension String{
+public extension BWSpace where Base == String{
     /// MD5加密类型
     enum MD5EncryptType {
         /// 32位小写
@@ -76,12 +74,12 @@ extension String{
         case uppercase16
     }
     func MD5Encrypt(_ md5Type: MD5EncryptType = .lowercase32) -> String {
-           guard self.count > 0 else {
+        guard self.base.count > 0 else {
                print("⚠️⚠️⚠️md5加密无效的字符串⚠️⚠️⚠️")
                return ""
            }
            /// 1.把待加密的字符串转成char类型数据 因为MD5加密是C语言加密
-           let cCharArray = self.cString(using: .utf8)
+        let cCharArray = self.base.cString(using: .utf8)
            /// 2.创建一个字符串数组接受MD5的值
            var uint8Array = [UInt8](repeating: 0, count: Int(CC_MD5_DIGEST_LENGTH))
            /// 3.计算MD5的值

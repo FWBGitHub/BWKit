@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UIColor {
+public extension UIColor{
     ///十六进制，example:0xffffff
     convenience init(_ hexColor: UInt) {
         self.init(hexColor, alpha: 1.0)
@@ -33,10 +33,13 @@ extension UIColor {
 
   
 }
-///随机色
-func RANDOM_COLOR() -> UIColor {
-    let colorValue1 :CGFloat!  = CGFloat(CGFloat(arc4random())/CGFloat(RAND_MAX))
-    let colorValue2 :CGFloat!  = CGFloat(CGFloat(arc4random())/CGFloat(RAND_MAX))
-    let colorValue3 :CGFloat!  = CGFloat(CGFloat(arc4random())/CGFloat(RAND_MAX))
-    return UIColor(red: colorValue1, green: colorValue2, blue: colorValue3, alpha: 1.0)
+public extension BWSpace where Base:UIColor{
+    ///随机色
+    static func RANDOM_COLOR() -> UIColor {
+        let colorValue1 :CGFloat!  = CGFloat(CGFloat(arc4random())/CGFloat(RAND_MAX))
+        let colorValue2 :CGFloat!  = CGFloat(CGFloat(arc4random())/CGFloat(RAND_MAX))
+        let colorValue3 :CGFloat!  = CGFloat(CGFloat(arc4random())/CGFloat(RAND_MAX))
+        return UIColor(red: colorValue1, green: colorValue2, blue: colorValue3, alpha: 1.0)
+    }
 }
+
