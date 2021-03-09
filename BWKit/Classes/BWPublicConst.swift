@@ -20,13 +20,13 @@ public struct BWConst{
     ///获得当前window
     public static let window:UIView = (UIApplication.shared.delegate?.window)!!
     ///状态栏高度
-    public let statusBarHeight:CGFloat = (UIDevice.bw.isIPhoneX_After() ? 44.0 : 20.0)
+    public static let statusBarHeight:CGFloat = (UIDevice.bw.isIPhoneX_After() ? 44.0 : 20.0)
     ///导航栏高度
-    public let navHeight:CGFloat = 44.0
+    public static let navHeight:CGFloat = 44.0
     ///整个头部高度
-    public var statusNavHeight:CGFloat {statusBarHeight + navHeight}
+    public static var statusNavHeight:CGFloat {statusBarHeight + navHeight}
     ///底部Tabbar高度
-    public let bottomBarHeight:CGFloat = (UIDevice.bw.isIPhoneX_After() ? 83.0 : 49.0)
+    public static let bottomBarHeight:CGFloat = (UIDevice.bw.isIPhoneX_After() ? 83.0 : 49.0)
 }
 public extension BWSpace where Base == BWConst{
 }
