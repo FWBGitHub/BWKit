@@ -14,6 +14,15 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         let str:String = "15757181084"
         let btn = BWTimeDownButton()
+        btn.timeDown = 60
+        btn.bw_setTitleColor(UIColor(0xFE6040), timeDownstate: .BWTimeDownNormal)
+        btn.bw_setTitle(" 获取验证码 ", timeDownstate: .BWTimeDownNormal)
+        btn.bw_setTitle(" 获取验证码 ", timeDownstate: .BWTimeDowned)
+        btn.bw_setTitle("重新获取(\(BWTimeDownTitle)", timeDownstate: .BWTimeDowning)
+        btn.bw_setTitleColor(UIColor(0xFE6040), timeDownstate: .BWTimeDowning)
+        btn.timeColor = UIColor(0xFE6040)
+        btn.startTimeDown()
+        btn.stopTimeDown()
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.bw.showHint("123123")

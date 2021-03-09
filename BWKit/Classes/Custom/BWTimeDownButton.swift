@@ -8,7 +8,7 @@
 import UIKit
 public let BWTimeDownTitle = "BWTimeDownTitle"
 public class BWTimeDownButton: UIButton {
-    enum BWTimeDownType {
+    public enum BWTimeDownType {
         ///可倒计时--可点击
         case BWTimeDownNormal
         ///准备倒计时--不可点击
@@ -32,24 +32,24 @@ public class BWTimeDownButton: UIButton {
         return dict
     }()
     ///倒计时时间
-    var timeDown:NSInteger = 0{
+    public var timeDown:NSInteger = 0{
         didSet{
             
         }
     }
     ///倒计时时间颜色
-    var timeColor:UIColor?{
+    public var timeColor:UIColor?{
         didSet{
             
         }
     }
     ///倒计时title
-    var disableTitle:String = ""{
+    public var disableTitle:String = ""{
         didSet{
             
         }
     }
-     func bw_setTitle(_ title:String,timeDownstate:BWTimeDownType){
+    public func bw_setTitle(_ title:String,timeDownstate:BWTimeDownType){
         switch timeDownstate {
         case .BWTimeDownNormal:
             self.setTitle(title, for:.normal)
@@ -69,7 +69,7 @@ public class BWTimeDownButton: UIButton {
         }
         
     }
-     func bw_setTitleColor(_ color:UIColor,timeDownstate:BWTimeDownType){
+    public func bw_setTitleColor(_ color:UIColor,timeDownstate:BWTimeDownType){
         switch timeDownstate {
         case .BWTimeDownNormal:
             self.setTitleColor(color, for:.normal)
@@ -152,7 +152,7 @@ public class BWTimeDownButton: UIButton {
         disableAttrbute.addAttribute(.foregroundColor, value: self.timeColor as Any, range: disableAttrbute.string.bw.nsrangeToStr(of: time))
         return disableAttrbute
     }
-    func stopTimeDown(){
+    public func stopTimeDown(){
         if(self.timer == nil){
             return
         }else{
