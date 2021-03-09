@@ -8,19 +8,25 @@
 
 import UIKit
 public struct BWConst{
-    public static let SCREEN_WIDTH:CGFloat = UIScreen.main.bounds.width
-    public static let SCREEN_HEIGHT:CGFloat = UIScreen.main.bounds.height
+    public static let Screen_Width:CGFloat = UIScreen.main.bounds.width
+    public static let Screen_Height:CGFloat = UIScreen.main.bounds.height
     
-    /*本地文件路径*/
-    public let kPATH_OF_DOCUMENT = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentationDirectory, FileManager.SearchPathDomainMask.userDomainMask, true).first!
-    
-    public let kPATH_OF_DOCUMENT1 = NSHomeDirectory().appending("/Documents")
-    public let KWindow:UIView = (UIApplication.shared.delegate?.window)!!
-    
-    
-
-    public let kStatusBarHeight:CGFloat = (UIDevice.bw.isIPhoneX_After() ? 44.0 : 20.0)
-    public let KNavHeight:CGFloat = 44.0
-    public var KTopHeight:CGFloat {kStatusBarHeight + KNavHeight}
-    public let kBottomBarHeight:CGFloat = (UIDevice.bw.isIPhoneX_After() ? 83.0 : 49.0)
+    ///获得沙盒的根路径
+    public static let Home_Path = NSHomeDirectory()
+    ///获得沙盒的Documents路径
+    public static let Documents_Path = Home_Path+"/Documents"
+    ///获得沙盒的Library路径
+    public static let Library_Path = Home_Path+"/Library"
+    ///获得当前window
+    public static let window:UIView = (UIApplication.shared.delegate?.window)!!
+    ///状态栏高度
+    public let statusBarHeight:CGFloat = (UIDevice.bw.isIPhoneX_After() ? 44.0 : 20.0)
+    ///导航栏高度
+    public let navHeight:CGFloat = 44.0
+    ///整个头部高度
+    public var statusNavHeight:CGFloat {statusBarHeight + navHeight}
+    ///底部Tabbar高度
+    public let bottomBarHeight:CGFloat = (UIDevice.bw.isIPhoneX_After() ? 83.0 : 49.0)
+}
+public extension BWSpace where Base == BWConst{
 }
