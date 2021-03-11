@@ -1,6 +1,6 @@
 {
   "name": "BWKit",
-  "version": "0.1.0",
+  "version": "0.2.7",
   "summary": "BWKit swift公共组件",
   "description": "TODO: BWKit swift公共组件",
   "homepage": "https://github.com/FWBGitHub/BWKit",
@@ -13,10 +13,57 @@
   },
   "source": {
     "git": "https://github.com/FWBGitHub/BWKit.git",
-    "tag": "0.1.0"
+    "tag": "0.2.7"
   },
   "platforms": {
     "ios": "9.0"
   },
-  "source_files": "BWKit/Classes/**/*"
+  "source_files": "BWKit/Classes/**/*",
+  "dependencies": {
+    "SnapKit": [
+
+    ],
+    "RTRootNavigationController": [
+
+    ],
+    "YYKit": [
+
+    ],
+    "RxSwift": [
+
+    ],
+    "RxCocoa": [
+
+    ],
+    "IQKeyboardManagerSwift": [
+
+    ],
+    "SwiftyUserDefaults": [
+
+    ],
+    "SwiftyRSA": [
+
+    ],
+    "Alamofire": [
+
+    ],
+    "ReachabilitySwift": [
+
+    ],
+    "SwiftyJSON": [
+
+    ],
+    "ObjectMapper": [
+
+    ],
+    "Moya/RxSwift": [
+
+    ],
+    "Moya/ReactiveSwift": [
+
+    ],
+    "HandyJSON": [
+
+    ]
+  }
 }
