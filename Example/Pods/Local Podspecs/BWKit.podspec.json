@@ -18,31 +18,5 @@
   "platforms": {
     "ios": "9.0"
   },
-  "source_files": "BWKit/Classes/**/*",
-  "dependencies": {
-    "SnapKit": [
-
-    ],
-    "RTRootNavigationController": [
-
-    ],
-    "YYKit": [
-
-    ],
-    "RxSwift": [
-
-    ],
-    "RxCocoa": [
-
-    ],
-    "IQKeyboardManagerSwift": [
-
-    ],
-    "SwiftyUserDefaults": [
-
-    ],
-    "SwiftyRSA": [
-
-    ]
-  }
+  "source_files": "BWKit/Classes/**/*"
 }
